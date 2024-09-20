@@ -25,7 +25,7 @@ describe('Create Answer', () => {
       attachmentsIds: ['1', '2']
     })
 
-    expect(result.isRight).toBe(true)
+    expect(result.isRight()).toBe(true)
     expect(inMemoryAnswerRepository.items[0]).toEqual(result.value?.answer)
     expect(inMemoryAnswerRepository.items[0].attachments.currentItems).toHaveLength(2)
     expect(inMemoryAnswerRepository.items[0].attachments.currentItems).toEqual([
